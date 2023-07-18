@@ -1,0 +1,27 @@
+public class main {
+  public static void main(String[] args) {
+    System.out.println("==================================================");
+     System.out.println("               MENGETAHUI TIPE DATA              ");
+      System.out.println("             B A H A S A   J A V A              ");
+      System.out.println("==================================================");
+      System.out.println();
+      int num = 5;
+      float floatnum = 5.99f;
+      char mtLetter = 'D';
+      boolean bool = true;
+      String myText = "Hello";
+      int[] array = {4,7,3,8,1};
+
+// mencetak ke layar isi variabel
+       System.out.println("Tipe data integer  : " + num);
+          System.out.println("Tipe data float  : " + floatnum);
+             System.out.println("Tipe data char  : " + mtLetter);
+                System.out.println("Tipe data Boolean  : " + bool);
+                   System.out.println("Tipe data String  : " + myText);
+                      System.out.println("Tipe data integer array : " + array);
+
+                      for (int i : array) {
+                        System.out.print(i +" ");
+  }
+}
+}
