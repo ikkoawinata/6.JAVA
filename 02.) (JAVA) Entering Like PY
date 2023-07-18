@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class py {//class ini adalah mempengaruhi semua data yg ada di dalam code atau nama filenya
+    public static void welcome() {
+        System.out.println("===========================================================");
+        System.out.println("            P    R    O    G     R     A     M            ");
+        System.out.println("                 ENTERING LIKE PYTHON                    ");
+         System.out.println("                B A H A S A   J A V A                   ");
+        System.out.println("===========================================================");
+    }
+
+    //main ini adalah fungsi utama dalam JAVA, kalau di CPP adalah int main
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        welcome();
+        System.out.print("Enter untuk lanjut: ");
+        String input = scanner.nextLine();
+        System.out.println("i love you");
+        scanner.close();
+    }
+}
