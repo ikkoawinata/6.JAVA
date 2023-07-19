@@ -1,0 +1,22 @@
+
+
+public class ulang {//class ini adalah mempengaruhi semua data yg ada di dalam code atau nama filenya
+    public static void welcome() {
+        System.out.println("===========================================================");
+        System.out.println("            P    R    O    G     R     A     M             ");
+        System.out.println("              P E R U L A N G A N   W H I L E              ");
+        System.out.println("                    B A H A S A   J A V A                  ");
+        System.out.println("===========================================================");
+    }
+
+    //main ini adalah fungsi utama dalam JAVA, kalau di CPP adalah int main
+    public static void main(String[] args) {
+        welcome();
+        int i = 1;
+        while (i <= 5){
+        System.out.println(i + " . Aku sayang kamu");
+        i++;
+
+        }
+    }
+}
