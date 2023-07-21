@@ -1,0 +1,220 @@
+import java.util.Scanner;
+
+
+
+public class minuman {
+    public static void welcome(){
+System.out.println("=================================================================");
+System.out.println("             P     R     O     G     R     A     M               ");
+System.out.println("         T  O  K  O    M  I  N  U  M  A  N    I  K  K  O         ");
+System.out.println("                      B A H A S A   J A V A                      ");
+System.out.println("=================================================================");
+    }
+
+
+    public static void tabel(){
+    
+      System.out.println ("====================================================");
+      System.out.println (" No. |\t    DAFTAR MINUMAN \t|  \t HARGA \t    |" );
+      System.out.println ("====================================================");
+      System.out.println (" 1.  | Jus Jeruk                | Rp.         20.000|") ;
+      System.out.println (" 2.  | Kopi Janji Jiwa          | Rp.         18.000|");
+      System.out.println (" 3.  | Mixue Lemon Tea          | Rp.         16.000|");
+      System.out.println (" 4.  | Es Campur Doger          | Rp.         15.000|") ;
+      System.out.println ( " 5.  | Milk Shake               | Rp.         13.500|");
+      System.out.println (" 6.  | Lemon Tea                | Rp.         10.000|");
+      System.out.println (" 7.  | Capuccino Expresso       | Rp.         10.000|") ;
+      System.out.println ( " 8.  | Ice Tea                  | Rp.          6.000|") ;
+      System.out.println ( " 9.  | Air Mineral Unesa        | Rp.          3.500|");
+      System.out.println ("====================================================");
+    }
+    public static void main(String[] args){
+        Scanner input = new Scanner (System.in);
+        welcome();
+
+        tabel();
+
+        float hasil1=0, hasil2 = 0, hasil3 = 0, hasil4 = 0, hasil5 = 0, hasil6 = 0, hasil7 = 0, hasil8 = 0, hasil9 = 0, total=0;
+        int n, pilihan;
+        String antrian, date, customer, satu, dua, tiga, empat, lima, enam, tujuh, delapan, sembilan;
+        char j = 'Y';
+        System.out.println("SELAMAT DATANG DI RESTAURANT MINUMAN YUNIK");
+        System.out.println("Tanggal pesanan [dd/mm/yyyy] : ");
+        date = input.nextLine();
+        System.out.println("Silahkan ketik nomor antrian [3 digit] : ");
+        antrian = input.nextLine();
+        System.out.println("Untuk customer pesanan atas customer siapa ? ");
+        customer = input.nextLine();
+
+
+
+        do{
+        System.out.println("Silahkan kakak mau apa ? [1/2/3/4/5/6/7/8/9] : ");
+        pilihan = input.nextInt();
+        input.nextLine();
+    
+        
+ switch(pilihan){
+    case 1:
+    System.out.println("\n------ Jus Jeruk ------   ");
+    System.out.print("Ketik ulang customer minuman yang dipilih [Jus_Jeruk] : ");
+    satu = input.nextLine();
+    System.out.print("Mau Pesan Berapa ? ");
+    n = input.nextInt();
+    hasil1 = n * 20000;
+    System.out.println("Total harganya untuk pesanan Jus Jeruk " + hasil1 + " ribu\n");
+    break;
+
+
+
+    case 2:
+    System.out.println("\n----- Kopi Janji Jiwa ------");
+    System.out.print("Ketik ulang customer minuman yang dipilih [Kopi_Janji_Jiwa] : ");
+    dua = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil2 = n * 18000;
+    System.out.println("total harganya untuk pesanan Kopi Janji Jiwa " + hasil2 + " ribu ");
+    break;
+
+
+    case 3 :
+    System.out.println("----- Mixue Lemon Tea ------");
+    System.out.println("Ketik ulang customer minuman yang dipilih [Es_Campur_Doger] : ");
+    tiga = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil3 = n * 16000;
+    System.out.println("Total harganya untuk pesanan Mixue Leom Tea  " + hasil3 + " ribu ");
+    break;
+
+
+    case 4:
+    System.out.println("------ Es Campur Doger  ------");
+    System.out.println("Ketik ulang customer minuman yang dipesan  [Es_Campur_Doger] : ");
+    empat = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil4 = n * 15000;
+    System.out.println("Total untuk harganya pesanan Milk Shake " + hasil4 + " ribu ");
+    break;
+
+
+    case 5:
+    System.out.println("------ Milk Shake ------");
+    System.out.println("Ketik ulang customer minuman yang dipesan [Milk_Shake] : ");
+    lima = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil5 = n * 13500;
+    System.out.println("Total harganya untuk pesanan Milk Shake " + hasil5 + " ribu ");
+    break;
+
+
+    case 6 :
+    System.out.println("------  Lemon Tea ------");
+    System.out.println("Ketik ulang customer minumam yang dipesan [Lemom Tea] : ");
+    enam = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil6 = n * 10000;
+    System.out.println("Total harganya untuk minuman Lemon Tea " + hasil6 + " ribu ");
+    break;
+
+
+    case 7 :
+    System.out.println("------ Cappucino Expresso ------");
+    System.out.println("Ketik ulang customer minuman yang dipilih [Cappucino Expresso] : ");
+    tujuh = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil7 = n * 10000;
+    break;
+
+
+
+    case 8 :
+    System.out.println("------Ice Tea ------");
+    System.out.println("Ketik ulang customer minuman yang dipilih [Ice_Tea] :");
+    delapan = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil8 = n * 8000;
+    System.out.println("Total harganya untuk pesanan Ice Tea " + hasil8 + " ribu ");
+    break;
+
+
+
+    case 9:
+    System.out.println("-----Air Mineral Unesa ------");
+    System.out.println("Ketik ulang customer minuman yang dipesan [Air_Mineral_Unesa] :");
+    sembilan = input.nextLine();
+    System.out.println("Mau pesan berapa ? ");
+    n = input.nextInt();
+    hasil9 = n * 3500;
+    System.out.println("Total harganya untuk pesanan Air Mineral Unesa " + hasil9 + " ribu ");
+    break;
+
+
+    default:
+    System.out.println("Pilihan tidak sesuai dengan tabel");
+    break;
+
+
+ }
+ //total keseluruhan 
+ total = (int) hasil1 + hasil2 + hasil3 + hasil4 + hasil5 + hasil6 + hasil7 + hasil8 + hasil9;
+
+ //tawaran lagi untuk customer
+ System.out.print("\nAda pesanan lain [Y/N]? ");
+ j = input.next().charAt(0);
+ input.nextLine();
+
+}
+while (j == 'Y' || j == 'y');
+    
+ System.out.println();
+ System.out.println("Total pesanan anda yang harus dibayar adalah: " + total + " ribu\n");
+System.out.println("");
+System.out.println("=================================================================================================\t");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                       R E S T A U R A N T   M I N U M A N   Y U N I K                      \t|");
+System.out.println("|                                   Jalan Sampoerna No. 12 B                                 \t|");
+System.out.println("|                                  Kecamatan Pabean Cantikan                                 \t|");
+System.out.println("|                                      ' 081233075270 '                                      \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|============================================================================================\t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                 " +  date +  "           \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|      Author   : 'IKKO AWINATA'                                                             \t|");
+System.out.println("|      Customer : " +  customer  +  "                                                                \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                          P  E  S  A  N  A  N      N  O  M  O  R                            \t|");
+System.out.println("|                   ____________________________________________________                     \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                           " + antrian +  "                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                 SILAHKAN DIAMBIL PESANANNYA SESUAI DENGAN NOMOR ANTRIAN                    \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("|                                                                                            \t|");
+System.out.println("===============================================================================================\t");
+System.out.println("");
+System.out.println(" Pesanan atas customer" + customer + "silahkan diambil pesanannya.");
+System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+System.out.println("Terima kasih telah menggunakan program ini");
+System.out.println("Made by Ikkoc_awinata");
+}
+
+}
+
