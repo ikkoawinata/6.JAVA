@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+
+public class bandingnilainote {
+    public static void welcome(){
+        System.out.println("============================================================");
+        System.out.println("                 P   R   O   G   R   A   M                  ");
+        System.out.println("     membandingkan nilai integer dan mengeluarkan note      ");
+        System.out.println("             B  A  H  A  S  A    J  A  V  A                 ");
+        System.out.println("============================================================");
+    }
+
+
+
+
+
+
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        welcome();
+        int a , b;
+        char j = 'Y';
+
+
+        do{
+        System.out.println("Masukkan nilai integer a : ");
+        a = input.nextInt();
+         System.out.println("Masukkan nilai integer b : ");
+        b = input.nextInt();
+
+        if ( a > b){
+            System.out.println("Nilai A lebih besar dari nilai B ");
+        }else if (a < b){
+            System.out.println("Nilai A lebih kecil dari Nilai B ");
+        }else if ( a == b){
+            System.out.println("Nilai A dan Nilai B sam besar");
+        }
+
+        System.out.print("\nAda pesanan lain [Y/N]? ");
+        j = input.next().charAt(0);
+        input.nextLine();
+       
+
+    }
+    while (j == 'Y' || j == 'y');
+    System.out.println("Terima kasih telah menggunakan program ini");
+    System.out.println("Made by ikkoc_awinata");
+}
+}
+
