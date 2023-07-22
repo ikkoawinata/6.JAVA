@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class inputdatabil {
+    public static void welcome(){
+     System.out.println("===============================================================");
+    System.out.println("       S E L A M A T  D A T A N G  D I  P R O G R A M ");
+    System.out.println("INPUT DATA DAN MENENTUKAN NILAI DATA TERKECIL DAN TERBESAR");
+    System.out.println("===============================================================");
+
+    }
+
+
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        welcome();
+        int  n;
+         double terkecil, terbesar, bil;
+        char j = 'Y';
+
+
+do{
+    System.out.println("Masukkan banyaknya data yang akan dimasukkan : ");
+    n = input.nextInt();
+    terbesar = 0;
+    terkecil = 0;
+
+for (int i = 1; i <= n; i++ ){
+    System.out.println("Masukkan bilangan ke :" + i);
+    bil = input.nextInt();
+    input.nextLine();
+
+    if(i == 1){
+        terkecil = bil;
+        terbesar = bil;
+    }else if ( bil < terkecil){
+        terkecil = bil;
+    }else if ( bil > terbesar){
+        terbesar = bil;
+    }
+}
+System.out.println("Nilai terkecilnya adalah : " + terkecil);
+ System.out.println("Nilai terbesar adalah : " + terbesar);
+  System.out.println();
+    System.out.println("Mau coba lagi ? [Y/N] :");
+    j = input.next().charAt(0);
+    input.nextLine();
+}
+while ( j == 'Y' || j == 'y');
+System.out.println("Terima kasih telah menggunakan program ini");
+System.out.println("Made by Ikkoc_awinata");
+    }
+}
+
