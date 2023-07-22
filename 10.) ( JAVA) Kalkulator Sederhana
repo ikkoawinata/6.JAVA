@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+public class kalkulator {
+    public static void welcome(){
+       System.out.println("=====================================================");
+       System.out.println("              SELAMAT DATANG DI PROGRAM              ");
+      System.out.println("                KALKULATOR SEDERHANA                 ");
+    }
+    
+
+    public static void tabel(){
+    System.out.println("======================================================");
+System.out.println("\t\t KALKULATOR SEDERHANA PYTHON \t\t");
+System.out.println("======================================================");
+System.out.println("1. Penjumlahan (+)");
+System.out.println("2. Pengurangan (-)");
+System.out.println("3. Pembagian   (/)");
+System.out.println("4. Perkalian   (x)");
+System.out.println("5. MODULUS");
+System.out.println("0. EXIT");
+System.out.println("======================================================");
+    }
+
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        welcome();
+        tabel();
+        int pilihan;
+        double  a,b,jumlah, kurang, bagi, kali, modus;
+        char j ='Y';
+
+
+        do{
+
+        System.out.println("Masukkan bilangan pertama : ");
+        a = input.nextInt();
+         System.out.println("Masukkan bilangan pertama : ");
+        b = input.nextInt();
+        System.out.println("Masukkan pilihan untuk operator matemtika : ");
+        pilihan = input.nextInt();
+
+
+        switch (pilihan){
+            case 1:
+            System.out.println("---- 1. PENJUMLAHAN----");
+            jumlah = a + b;
+            System.out.println("Hasil dari penjumlahan " + a + " + " + b + " = " + jumlah );
+            break;
+
+
+
+              case 2:
+            System.out.println("---- 2. PENGURANGAN----");
+            kurang = a - b;
+            System.out.println("Hasil dari penjumlahan " + a + " - " + b + " = " + kurang );
+            break;
+
+
+
+              case 3:
+            System.out.println("---- 3. PEMBAGIAN----");
+            bagi = a / b;
+            System.out.println("Hasil dari penjumlahan " + a + " / " + b + " = " + bagi );
+            break;
+
+
+
+            case 4:
+            System.out.println("---- 4. PERKALIAN----");
+            kali = a * b;
+            System.out.println("Hasil dari penjumlahan " + a + " / " + b + " = " + kali );
+            break;
+
+
+            case 5:
+             System.out.println("---- 5. MODULUS----");
+            modus = a % b;
+            System.out.println("Hasil dari penjumlahan " + a + " % " + b + " = " + modus );
+            break;
+
+
+            case 0:
+            System.out.println("---- 6. EXIT----");
+            System.out.println("Anda kelar dari program ini");
+            break;
+
+        }
+        System.out.println();
+        System.out.println("mau coba lagi ? [Y/N] : ");
+        j = input.next().charAt(0);
+        input.nextLine();
+        }
+        while (j == 'Y' || j == 'y');
+        System.out.println("terima kasih telah menggunakan program ini");
+        System.out.println("made by Ikkoc-awinata");
+    }
+}
