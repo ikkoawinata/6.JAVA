@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+
+public class nilaibesar {
+    public static void welcome(){
+        System.out.println("===========================================================");
+        System.out.println("S E L A M A T  D A T A N G  D I  P R O G R A M ");
+        System.out.println("              MENCARI NILAI TERBESAR ");
+        System.out.println("===========================================================");
+    }
+
+
+    public static void main(String[] args){
+        Scanner input = new Scanner (System.in);
+        welcome();
+        int a,b,c, maks;
+        char j = 'Y';
+
+do{
+        System.out.println("Masukkan nilai a : ");
+        a = input.nextInt();
+        System.out.println("Masukkan nilai b : ");
+        b = input.nextInt();
+        System.out.println("Masukkan nilai c : ");
+        c = input.nextInt();
+
+        //perulangan If - ELse
+        if ( a > b){
+            maks = a;
+        }else {
+            maks = b;
+        }if (c > maks ){
+            maks = c;
+        }
+System.out.println("nilai terbesarnya adalah : " + maks);
+System.out.println();
+System.out.println("Mau coba lagi ? [Y/N] : ");
+j = input.next().charAt(0);
+input.nextLine();
+    }
+    while (j == 'Y' || j == 'y');
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("Terima kasih telah menggunakan program ini");
+    System.out.println("Made by Ikkoc_awinata");
+}
+}
