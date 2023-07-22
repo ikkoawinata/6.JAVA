@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class umurloop {
+    public static void welcome(){
+    System.out.println("================================================================");
+    System.out.println("               S E L A M A T   D A T A N G   D I                ");
+    System.out.println("             PERULANGAN WHILE DAN PERCANGAN IF ELSE             ");
+    System.out.println("                        U   M   U   R                           ");
+    System.out.println("                B  A  H  A  S  A   J  A  V  A                   ");
+    System.out.println("================================================================");
+    }
+
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        welcome();
+        int umur;
+        char j = 'Y';
+
+do{
+        System.out.println("Umur anda berapa sekarag ? " );
+        umur = input.nextInt();
+        while ( umur < 12  ||umur > 500){
+        System.out.println("Saya tidak yakin umur anda " + umur);
+        System.out.println("Silahkan diulangi lagi....");
+        
+        System.out.println();
+         System.out.println("Umur anda berapa sekarag ? " );
+        umur = input.nextInt();
+        }
+           System.out.println();
+
+        if (umur > 12 && umur < 19 ){
+            System.out.println("Waahh anda baru saja beranjak dewasa");
+            System.out.println("Gunakan waktu sebaik-baiknya");
+        }else if (umur >= 19 && umur <=100){
+            System.out.println("anda sudah beranjak tua");
+            System.out.println("Jadilah seseorang yang dewasa");
+            System.out.println();
+        }else if (umur > 100 && umur >=500){
+            System.out.print(" WOAAH ANDA SANGATTTTT WAAHH SEKALI ");
+            System.out.println();
+        }
+        System.out.println("Mau coba program lagi ? [Y/N] :");
+        j = input.next().charAt(0);
+        input.nextLine();
+    }
+    while (j == 'Y' || j == 'y');
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("Terima kasih telah menggunakan program ini");
+    System.out.println("Made by ikkoc_awinata");
+}
+}
+
+
