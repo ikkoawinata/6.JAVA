@@ -1,0 +1,545 @@
+
+//fungsi ini untuk Scan masukkan dari user seperti kalau pada Python itu adalah input("enter untuk lanjut")
+import java.util.Scanner;
+
+
+
+public class rumus{
+    static void welcome(){
+        System.out.println("==========================================================================");
+         System.out.println("                 P     R     O     G     R     A     M                    ");
+            System.out.println("      R U M U S   L U A S   P E R M U K A A N   B A N G U N A N           ");
+            System.out.println("                       B A H A S A   J A V A                              ");
+            System.out.println("==========================================================================");
+            }
+
+
+    static void tabel(){
+        System.out.println("================================================================================");
+        System.out.println("A. R U M U S  K E L I L I N G  &  L U A S  B A N G U N  D A T A R \t\t ");
+        System.out.println("================================================================================");
+        System.out.println("1. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 22/7)               \t|");
+        System.out.println("2. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 22/7)                \t|");
+        System.out.println("3. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 3,14)               \t|");
+        System.out.println("4. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 3,14)                \t|");
+        System.out.println("5. | Menghitung Panjang Busur pada Lingkaran                              \t|");
+        System.out.println("6. | Menghitung Keliling Persegi                                          \t|");
+        System.out.println("7. | Menghitung Luas Persegi                                              \t|");
+        System.out.println("8. | Menghitung Keliling Persegi Panjang                                  \t|");
+        System.out.println("9. | Menghitung Luas Persegi Panjang                                      \t|");
+        System.out.println("10.| Menghitung Keliling Jajar Genjang                                    \t|");
+        System.out.println("11.| Menghitung Luas Jajar Genjang                                        \t|");
+        System.out.println("12.| Menghitung Keliling Segitiga                                         \t|");
+        System.out.println("13.| Menghitung Luas Segitiga                                             \t|");
+        System.out.println("14.| Menghitung Luas Belah Ketupat                                        \t|");
+        System.out.println("15.| Menghitung Luas Trapesium                                            \t|");
+        System.out.println("==============================================================================");
+        System.out.println("B. R U M U S  L U A S  P E R M U K A A N  &  V O L U M E  B A N G U N  R U A N G");
+        System.out.println("==============================================================================");
+        System.out.println("16.| Menghitung Luas Kubus                                                \t|");
+        System.out.println("17.| Menghitung Volume Kubus                                              \t|");
+        System.out.println("18.| Menghitung Luas Balok                                                \t|");
+        System.out.println("19.| Menghitung Volume Balok                                              \t|");
+        System.out.println("20.| Menghitung Luas Permukaan Limas Segiempat                            \t|");
+        System.out.println("21.| Menghitung Volume Limas Segiempat                                    \t|"); 
+        System.out.println("22.| Menghitung Volume Prisma Segitiga                                    \t|"); 
+        System.out.println("23.| Menghitung Luas Prisma Segitiga                                      \t|"); 
+        System.out.println("24.| Menghitung Volume Limas Segitiga                                     \t|"); 
+        System.out.println("25.| Menghitung Luas Selimut Tabung (Jari-Jari);                           \t|"); 
+        System.out.println("26.| Menghitung Luas Selimut Tabung (diameter);                            \t|"); 
+        System.out.println("27.| Menghitung Luas Permukaan Tabung (Jari-Jari);                         \t|"); 
+        System.out.println("28.| Menghitung Volume Tabung (Jari-Jari);                                 \t|"); 
+        System.out.println("29.| Menghitung Luas Selimut Kerucut                                      \t|"); 
+        System.out.println("30.| Menghitung Luas Permukaan Kerucut                                    \t|"); 
+        System.out.println("31.| Menghitung Volume Kerucut                                            \t|"); 
+        System.out.println("32.| Menghitung Luas Bola                                                 \t|"); 
+        System.out.println("33.| Menghitung Volume Bola                                               \t|"); 
+        System.out.println("==============================================================================");
+
+    }
+
+    //ini adalah fungsi utama pada bahasa Java
+public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    int pilihan,j, r,d,t,T, phi, Phi, jari, busur,sisi,L, panjang, lebar, alas,p,q,a, akar, rumus1,rumus, p1, L1, T1, rumusss, sisi1;
+    Double keliling1, rumus2,Luas7, L_alas,L_segitiga,L_limas,LALAS, sisisegitiga, sqrt,Lp_PS, rumusa, rumusb, T25, r25, pytagoras;
+    float keliling;
+    char jawab = 'Y';
+    welcome();
+
+    
+    do{
+    tabel();
+    System.out.print("Klik Enter untuk melanjutkan : ");
+    input.nextLine();
+
+
+    //pilihan user
+    System.out.println("masukan pilihan anda pada tabel : ");
+    pilihan = input.nextInt();
+    input.nextLine();
+    
+switch (pilihan){
+    case 1: 
+    System.out.println("---- 1.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 22/7) ----");
+    System.out.println("Masukkan jari-jari lingkaran : " );
+    r = input.nextInt();
+    keliling = 2 * 22/7 * r ;
+    System.out.println("Rumusnya yaitu : Keliling = 2 * 22/7 * r = 2 * 22/7 * " +  r + " = " +  keliling);
+    System.out.println("Keliling lingkaran dengan jari-jari adalah : " +  keliling);
+    break;
+
+
+    case 2:
+     System.out.println("---- 2.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 22/7) ----");
+     System.out.println("Masukkan jari-jari lingkaran : ");
+     d = input.nextInt();
+     keliling = 22 / 7 * d;
+     System.out.println("Rumusnya yaitu : Keliling =  22/7 * d = 2 * 22/7 * " +  d +  " = " +  keliling);
+     System.out.println("Keliling lingkaran dengan jari-jari adalah : " +  keliling);
+     break;
+
+
+
+      case 3:
+     System.out.println("----3.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 3,14)----");
+     System.out.println("Masukkan jari-jari lingkaran : ");
+     r = input.nextInt();
+     keliling1 = 2 * 3.14 * r;
+     System.out.println("Rumusnya yaitu : Keliling =  2* 3.14 * r = 2 * 3.14 * " + r +  " = " + keliling1);
+    System.out.println("Keliling lingkaran dengan jari-jari adalah : " + keliling1);
+     break;
+
+
+     case 4:
+     System.out.println("---- 4.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 3,14)----");
+    System.out.println("Masukkan jari-jari lingkaran : ");
+    d = input.nextInt();
+    keliling1 = 3.14 * d;
+    System.out.println("Rumusnya yaitu : Keliling =  3.14 * d = 2 * 3.14 * " + d + " = " + keliling1);
+    System.out.println("Keliling lingkaran dengan jari-jari adalah : " +  keliling1);
+    break;
+
+
+
+
+case 5:
+    System.out.println("---- 5.) MENGHITUNG PANJANG BUSUR LINGKARAN ---------");
+    System.out.println("Masukkan busur lingkaran : ");
+    busur = input.nextInt();
+    System.out.println("Masukkan jari-jari lingkaran : ");
+    r = input.nextInt();
+    rumus1 =  busur/360 * 22/7 * r * 2; 
+    rumus2 =  busur/360 * 3.14 * r * 2; 
+    System.out.println(" Rumus 1 (phi = 22/7) yaitu = busur/360 * phi * r * 2 = " +  busur + " / 360 * 22/7 * " + r + " * 2 = " + rumus1);
+    System.out.println(" Rumus 1 (phi = 3.14) yaitu = busur/360 * phi * r * 2 = " + busur + " / 360 * 3.14 * " + r + " * 2 = "  + rumus2);
+break;
+
+
+
+
+case 6 :
+System.out.println("---- 6.) MENGHITUNG KELILING PERSEGI ---------");
+System.out.println("Masukkan sisi persegi : ");
+d = input.nextInt();
+keliling = 4 * d;
+System.out.println("Rumusnya yaitu : Keliling = 4 * sisi = 4 * " + d + " = " + keliling);
+System.out.println("Keliling perseginya adalah = " + keliling);
+break;
+
+
+
+
+case 7 :
+System.out.println("---- 7.) MENGHITUNG LUAS PERSEGI ---------");
+System.out.println("Masukkan sisi persegi : ");
+d = input.nextInt();
+Luas7 = Math.pow(d,2);
+System.out.println("Rumusnya yaitu : Luas = " + Luas7);
+break;
+
+
+case 8 :
+System.out.println("---- 8.) MENGHITUNG KELILING PERSEGI PANJANG ---------");
+System.out.println("Masukkan panjang bangunan : ");
+panjang = input.nextInt();
+System.out.println("Masukkan lebar bangunan: ");
+lebar = input.nextInt();
+keliling = 2 * (panjang + lebar);
+System.out.println("Rumusnya yaitu : 2 * (panjang + lebar = 2 * (" +  panjang +  " + " + lebar + " ) = " + keliling);
+break;
+
+
+
+
+case 9:
+System.out.println("--------- 9.) MENGHITUNG LUAS PERSEGI PANJANG ---------");
+System.out.println("Masukkan panjang bangunan : ");
+panjang = input.nextInt();
+System.out.println("Masukkan lebar bangunan: ");
+lebar = input.nextInt();
+L= (panjang * lebar);
+System.out.println("Rumusnya yaitu : L = panjang * lebar =  " +panjang + " * " + lebar + "  = " + L);
+break;
+
+
+
+case 10:
+System.out.println("--------- 10.) MENGHITUNG KELILING JAJAR GENJANG ---------");
+System.out.println("Masukkan panjang bangunan : ");
+panjang = input.nextInt();
+System.out.println("Masukkan lebar bangunan: ");
+lebar = input.nextInt();
+L = 2 * (panjang + lebar);
+System.out.println("Rumusnya yaitu : Luas = 2 * (panjang * lebar ) = "+ panjang +" + " + lebar + " ) = " + L);
+break;
+
+
+case 11:
+System.out.println("--------- 11.) MENGHITUNG LUAS JAJAR GENJANG ---------");
+System.out.println("Masukkan alas bangunan : ");
+alas = input.nextInt();
+System.out.println("Masukkan tinggi bangunan : ");
+t = input.nextInt();
+L = alas * t;
+System.out.println("Rumusnya yaitu : Luas = alas * tinggi =  " +  alas + " * " + t + " = " + L);
+break;
+
+
+
+case 12:
+System.out.println("--------- 12.) MENGHITUNG KELILING SEGITIGA  ---------");
+System.out.println("Masukkan  a : ");
+a = input.nextInt();
+System.out.println("Masukkan  b : ");
+p = input.nextInt();
+System.out.println("Masukkan  c : ");
+q = input.nextInt();
+keliling = a + p + q ;
+System.out.println("Rumusnya yaitu : Keliling = a + b + c = " +  a + " + " +  p +  " + " + q + " = " + keliling );
+break;
+
+
+
+
+case 13:
+System.out.println("--------- 13.) MENGHITUNG LUAS SEGITIGA ---------");
+System.out.println("Masukkan alas segitiga : ");
+alas = input.nextInt();
+System.out.println("Masukkan tinggi segitiga : ");
+t = input.nextInt();
+L = 1/2 * alas * t;
+System.out.println("Rumusnya yaitu : Luas = 1/2 * alas * tinggi = 1/2 * "+ alas+ " * "+ t+ " = "+L);
+break;
+
+
+
+case 14:
+System.out.println("--------- 14.) MENGHITUNG LUAS BELAH KETUPAT---------");
+System.out.println("Masukkan diagonal a : ");
+alas = input.nextInt();
+System.out.println("Masukkan diagonal b : ");
+t = input.nextInt();
+L = 1/2 * alas * t;
+System.out.println("Rumusnya yaitu : Luas = 1/2 * Diagonal 1 * Diagonal 1 = 1/2 * "+ alas+ " * "+ t+ " = "+L);
+break;
+
+
+
+case 15:
+System.out.println("--------- 15.)MENGHITUNG TRAPESIUM ---------");
+System.out.println("Masukkan diagonal a : ");
+p = input.nextInt();
+System.out.println("Masukkan diagonal b : ");
+q = input.nextInt();
+System.out.println("Masukkan tinggi : ");
+t = input.nextInt();
+L =  (p+q)/2 * t;
+System.out.println("Rumusnya yaitu : Luas = (a+b)/2 * tinggi = ( "+ p+ " + "+ q+ ") / 2 * "+ t+ " = "+L);
+break;
+
+
+case 16:
+System.out.println("--------- 16.) MENGHITUNG LUAS KUBUS ---------");
+System.out.println("Masukkan rusuk kubus : ");
+r = input.nextInt();
+Luas7 = 6 * Math.pow(r,2);
+System.out.println("Rumusnya yaitu :  L = 6 * r^2 = 6 * "+r+ " ^ 2 = "+ Luas7);
+break;
+
+
+
+case 17:
+System.out.println("---------17.) MENGHITUNG VOLUME KUBUS ---------");
+System.out.println("Masukkan rusuk kubus : ");
+r = input.nextInt();
+Luas7 = Math.pow(r, 2);
+System.out.println("Rumusnya yaitu :  Volume =  r^3 = "+r+ " ^ 3 = "+Luas7);
+break;
+
+
+
+case 18:
+System.out.println("--------- 18.) MENGHITUNG LUAS BALOK ---------");
+System.out.println("Masukkan panjang balok : ");
+panjang = input.nextInt();
+System.out.println("Masukkan lebar balok : ");
+lebar = input.nextInt();
+System.out.println("Masukkan tinggi balok : ");
+T = input.nextInt();
+L=  2*(panjang * lebar) + 2*(panjang * T) + 2*(lebar * T);
+System.out.println("Rumusnya yaitu : Luas = 2*(Panjang * lebar) + 2*(Panjang * tinggi) + 2*(lebar*tinggi) = 2 * ("+ panjang+ " * "+lebar+" ) + 2 * ( "+ panjang+" * "+ T+ " ) + 2 * ( "+ lebar+ " * "+ T+ " = "+ L);
+break;
+
+
+
+case 19:
+System.out.println("--------- 19.) MENGHITUNG VOLUME BALOK ---------");
+System.out.println("Masukkan panjang balok : ");
+panjang = input.nextInt();
+System.out.println("Masukkan lebar balok : ");
+lebar = input.nextInt();
+System.out.println("Masukkan tinggi balok : ");
+T = input.nextInt();
+rumusss =  panjang * lebar * T;
+System.out.println("Rumusnya yaitu : Volume = Panjang * lebar * tinggi = "+ panjang+ " * "+ lebar + " * "+ T+ " = "+ rumusss);
+break;
+
+
+case 20:
+System.out.println("--------- 20.) MENGHITUNG LUAS PERMUKAAN LIMAS SEGIEMPAT ---------");
+System.out.println("Masukkan sisi alas : ");
+sisi = input.nextInt();
+System.out.println("Masukkan tinggi alas : ");
+t = input.nextInt();
+L_alas = Math.pow(sisi,2);
+L_segitiga = 1.0/2.0 * sisi * t;
+L_limas =  (4 * L_segitiga) + L_alas;
+System.out.println("Rumusnya yaitu : Luas = (4 * Luas Segitiga) + Luas Alas = (4 * " + L_segitiga + " ) + " + L_alas + " = " + L_limas );
+break;
+
+
+
+case 21:
+System.out.println("--------- 21.) MENGHITUNG VOLUME LIMAS SEGIEMPAT ---------");
+System.out.println("Masukkan sisi alas : ");
+alas = input.nextInt();
+System.out.println("Masukkan tinggi alas : ");
+t = input.nextInt();
+LALAS = Math.pow(alas,2);
+keliling1 = 1/3 * LALAS * t;
+System.out.println("Rumusnya yaitu : Volume = 1/3 * Luas Alas * Tinggi = 1/3 * " + LALAS + " * " + t + " = " + keliling1);
+System.out.println("hasilnya adalah : " + keliling1 +" cm " );
+break;
+
+
+case 22:
+System.out.println("---------22.) MENGHITUNG VOLUME PRISMA SEGITIGA---------");
+System.out.println("Masukkan luas alas : ");
+alas/*L_Alas */ = input.nextInt();
+System.out.println("Masukkan tinggi alas : ");
+t = input.nextInt();
+System.out.println("Masukkan T  : ");
+T = input.nextInt();
+LALAS = 1.0/2.0*alas*t;
+rumus = alas * T;
+System.out.print("Rumusnya yaitu : Volume = 1/2 * alas * tinggi * Tinggi = 1/2 *" + alas + " * " + t + " * " + T +  " = " + rumus);
+System.out.println("hasilnya adalah : " + rumus + " cm " );
+
+
+
+case 23:
+System.out.println("---------23.) MENGHITUNG LUAS PERMUKAAN PRISMA SEGITIGA---------");
+System.out.println(" Lp Prisma Segitiga = Luas Selimut + Luas Alas");
+System.out.println("Masukkan panjang  : ");
+sisi = input.nextInt();
+System.out.println("Masukkan sisi lebar : ");
+lebar = input.nextInt();
+System.out.println("Masukkan lebar prisma : ");
+L = input.nextInt();
+sisisegitiga = Math.pow(lebar,2) - Math.pow(L,2);
+System.out.println("Hasil sisi segitiga yang hasilnya berbentuk akar : " + sisisegitiga );
+sqrt = Math.sqrt(sisisegitiga);
+System.out.println("Akar dari " + sisisegitiga + " yaitu : " + sqrt );
+LALAS/*L_Selimut */ = (sisi*lebar) + (sisi*L) +(sisi*sqrt);
+System.out.println("Luas selimutnya adalah : " + LALAS);
+System.out.println("");
+System.out.println("eittsss ini belum selesai.....tekan enter untuk melihat hasil Luas Permukaan Prisma Segitiga");
+input.nextLine();
+L_alas = 2*(1.0/2.0*sqrt*L);
+Lp_PS = L_alas + LALAS;
+System.out.println( "\t      :2*(1/2*" +  sqrt + " * " + L + ") + (" + sisi + " * " + lebar + ") + (" + sisi + " * " + sisisegitiga + "  ) + (" +  sisi + " * " +  sqrt + " ) = " + Lp_PS );
+System.out.println( "hasil dari Luas Permukaan Prisma Segitiga adalah : " +  Lp_PS + "cm" );
+break;
+
+
+
+
+case 24:
+System.out.println("---------24.) MENGHITUNG VOLUME LIMAS SEGITIGA ---------");
+System.out.println("Masukkan alas limas segitiga  : ");
+a = input.nextInt();
+System.out.println("Masukkan tinggi limas  : ");
+T = input.nextInt();
+System.out.println("Masukkan tinggi alas limas  : ");
+t = input.nextInt();
+keliling1/*rumus */ = 1.0/3.0*a*T*t;
+System.out.println( "Rumusnya yaitu : 1/3 *a*T*t = 1/3 * "+ a + " * " +  T + " * " +  t +  " = " + keliling1);
+System.out.println( "maka volume limas segitiga adalah : " + keliling1 + "cm" );
+break;
+
+
+
+case 25:
+System.out.println("---------25.) MENGHITUNG LUAS SELIMUT TABUNG (JARI-JARI) ---------");
+System.out.println("Masukkan jari-jari   : ");
+r25= input.nextDouble();
+System.out.println("Masukkan tinggi tabung  : ");
+T25 = input.nextDouble();
+rumusa = 2*22/7*r25*T25;
+Luas7/*rumus */ =  2*(3.14*r25)*T25;
+System.out.println("Rumus A yaitu : Luas = 2 * Phi * r * tinggi = 2 * 22/7 * " + r25 + " * " + T25 + " = " + rumusa);
+System.out.println("Rumus B yaitu : Luas = 2 * Phi * r * tinggi = 2 * 3.14 * " + r25 + " * " + T25 + " = " + Luas7);
+System.out.println("hasil luas selimut (phi= 22/7 ) : " + rumusa + " cm " );
+System.out.println("hasil luas selimut (phi= 3.14 ) : " + Luas7 + " cm " );
+break;
+
+
+
+
+
+case 26:
+System.out.println("---------26.) MENGHITUNG LUAS SELIMUT TABUNG (DIAMETER) ---------");
+System.out.println("Masukkan diameter tabung   : ");
+r25/*d */= input.nextDouble();
+System.out.println("Masukkan tinggi tabung  : ");
+T25/*tinggi */= input.nextDouble();
+rumusa = 22/7*r25*T25;
+Luas7/*rumus */ = 3.14*r25*T25;
+System.out.println ("Rumus A yaitu : Luas = phi * diameter * tinggi = 22/7 * " + r25 + " * " + T25 + " = " + rumusa );
+System.out.println ("Rumus B yaitu : Luas = phi * diameter * tinggi = 3.14 * " + r25 + " * " + T25 + " = " + Luas7 );
+System.out.println ("hasil luas selimut (phi=22/7) : " + rumusa + " cm " );
+System.out.println ("hasil luas selimut (phi=3.14) : " + Luas7 + " cm " );
+break;
+
+
+
+case 27:
+System.out.println("---------27.) MENGHITUNG LUAS PERMUKAAN TABUNG (JARI-JARI) ---------");
+System.out.println("Masukkan jari-jari tabung   : ");
+r25/*d */= input.nextDouble();
+System.out.println("Masukkan tinggi tabung   : ");
+T25/*tinggi */= input.nextDouble();
+rumusa = 2*(22/7*r25)*(r25+T25);
+Luas7/*rumus */=2*(3.14*r25)*(r25+T25);
+System.out.println("Rumus A yaitu : Luas = 2 * (phi * r) * (jari-jari + tinggi) = 2 * (22/7 * " + r25 + " * ) * (" + r25 + " + " + T25 + " ) = " + rumusa);
+System.out.println("Rumus B yaitu : Luas = 2 * (phi * r) * (jari-jari + tinggi) = 2 * (3.14 * " + r25 + " * ) * (" + r25 + " + " + T25 + " ) = " + Luas7);
+System.out.println("Hasilnya luas permukaan tabung (phi = 22/7 ) : " + rumusa + " cm" );
+System.out.println("Hasilnya luas permukaan tabung (phi = 3.14) : " + Luas7 + " cm" );
+break;
+
+
+
+case 28:
+System.out.println("---------28.) MENGHITUNG VOLUME TABUNG (JARI-JARI)---------");
+System.out.println("Masukkan jari-jari volume tabung   : ");
+r25/*r */= input.nextDouble();
+System.out.println("Masukkan tinggi tabung   : ");
+T25/*tinggi */= input.nextDouble();
+rumusa = 22/7*Math.pow(25,2)*T25;
+Luas7 = 3.14*Math.pow(25,2)*T25;
+System.out.println( "Rumus A yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 22/7 * " + Math.pow(r25,2) + " * " + T25 + " = " + rumusa);
+System.out.println( "Rumus B yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 3.14 * " + Math.pow(r25,2) + " * " + T25 + " = " + Luas7);
+break;
+
+
+case 29:
+System.out.println("---------29.) MENGHITUNG VOLUME TABUNG (JARI-JARI)---------");
+System.out.println("Masukkan jari-jari kerucut   : ");
+r25/*r */= input.nextDouble();
+System.out.println("Masukkan sisi kerucut  : ");
+T25/*sisikerucut */= input.nextDouble();
+pytagoras = Math.pow(r25,2) + Math.pow (T25,2);
+System.out.println("hasil sisi segitiga yang hasilnya berbentuk akar : " + pytagoras);
+sqrt =Math.sqrt(pytagoras);
+rumusa = 22.0/7.0*r25*sqrt;
+rumus2 = 3.14*r25*sqrt;
+System.out.println("Akar dari " + pytagoras + "adalah = " + sqrt);
+System.out.println("Rumus A yaitu : Luas = phi * r * sisi =  22/7 * " + r25 + " * " + sqrt +  " = " +  rumusa );
+System.out.println("Rumus B yaitu : Luas = phi * r * sisi =  3.14 * " + r25 + " * " + sqrt +  " = " +  rumus2 );
+break;
+
+
+
+
+case 30:
+System.out.println("---------30.) MENGHITUNG LUAS PERMUKAAN KERUCUT---------");
+System.out.println("Masukkan jari-jari kerucut   : ");
+r25/*r */= input.nextDouble();
+System.out.println("Masukkan sisi kerucut   : ");
+T25/*sisi kerucut */= input.nextDouble();
+rumusa = (22.0/7.0 * r25 *(r25 + T25));
+rumus2 = (3.14 * r25 *(r25 + T25));
+System.out.println("Rumus A yaitu : Luas = (phi * r * (r + tinggi sisi) = 22/7 * " + r25 + " * ( " + r25 + " + " + T25 + " ) = " + rumusa );
+System.out.println("Rumus B yaitu : Luas = (phi * r * (r + tinggi sisi) = 3.14 * " + r25 + " * ( " + r25 + " + " + T25 + " ) = " + rumus2 );
+System.out.println("Hasilnya luas permukaan kerucut (phi =22/7 ) : " + rumusa + " cm " );
+System.out.println("Hasilnya luas permukaan kerucut (phi =3.14 ) : " + rumus2 + " cm " );
+break;
+
+
+
+
+case 31:
+System.out.println("---------31.) MENGHITUNG VOLUME TABUNG (JARI-JARI)---------");
+System.out.println("Masukkan jari-jari kerucut   : ");
+r25/*r */= input.nextDouble();
+System.out.println("Masukkan tinggi kerucut   : ");
+T25/*sisi kerucut */= input.nextDouble();
+rumusa = 1.0/3.0 * 22.0/7.0 * Math.pow(r25,2) * T25;
+rumus2 = 1.0/3.0 * 3.14 * Math.pow(r25,2) * T25;
+System.out.println ("Rumus A yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 22/7 * " + Math.pow (r25,2) + " * " + T25 + " = " +  rumusa);
+System.out.println ("Rumus B yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 3.14 * " + Math.pow (r25,2) + " * " + T25 + " = " +  rumus2);
+System.out.println ("Hasilnya volume kerucut (phi =22/7 ) : " + rumusa + " cm ");
+System.out.println ("Hasilnya volume kerucut (phi =3.14 ) : " + rumus2 + " cm ");
+break;
+
+
+
+case 32:
+System.out.println("--------- 32.) MENGHITUNG LUAS BOLA ---------");
+System.out.println("Masukkan jari-jari bola atau diameter bola   : ");
+r25 = input.nextDouble();
+rumusa = 4*22/7*Math.pow(r25,2);
+rumus2 = 4*3.14*Math.pow(r25,2);
+System.out.println("Rumus A yaitu : Luas = 4 * phi * r pangkat 2 = 4 * 22/7 * " + Math.pow (r25,2) + " = " + rumusa );
+System.out.println("Rumus B yaitu : Luas = 4 * phi * r pangkat 2 = 4 * 3.14 * " + Math.pow (r25,2) + " = " + rumus2 );
+System.out.println( "Hasilnya luas permukaan tabung (phi =22/7 ) : " +  rumusa + " cm ");
+System.out.println( "Hasilnya luas permukaan tabung (phi =3.14 ) : " +  rumus2 + " cm ");
+break;
+
+
+
+case 33:
+System.out.println("---------33.) MENGHITUNG VOLUME BOLA  ---------");
+System.out.println("Masukkan jari-jari bola atau diameter bola   : ");
+r25 = input.nextDouble();
+rumusa = 4.0/3.0*22/7*Math.pow(r25,3);
+rumus2 = 4.0/3.0*3.14*Math.pow(r25,3);
+System.out.println( "Rumus A yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 22/7 * " + Math.pow(r25,3) + " = " + rumusa);
+System.out.println( "Rumus B yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 3,14 * " + Math.pow(r25,3) + " = " + rumus2 );
+System.out.println( "Hasilnya luas permukaan tabung (phi =22/7 ) : " + rumusa + " cm " );
+System.out.println( "Hasilnya luas permukaan tabung (phi =3.14 ) : " + rumus2 + " cm " );
+break;
+
+
+
+}
+System.out.print("\nAda pesanan lain [Y/N]? ");
+j = input.next().charAt(0);
+input.nextLine();
+}
+while (j== 'Y' || j == 'y');
+System.out.println("Terima kasih telah menggunakan program ini");
+System.out.println("Made by ikkoc_awinata");
+}
+}
