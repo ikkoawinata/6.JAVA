@@ -1,0 +1,168 @@
+import java.util.Scanner;
+
+public class suhu {
+    public static void welcome() {
+        System.out.println("=================================================================");
+        System.out.println("                  P    R    O    G    R    A    M                ");
+        System.out.println("                   K A L K U L A T O R   S U H U                 ");
+        System.out.println("                        B A H A S A   J A V A                    ");
+        System.out.println("=================================================================");
+
+    }
+
+    public static void tabel() {
+        System.out.println("========================================");
+        System.out.println("No.|             Nama Suhu              |");
+        System.out.println("========================================");
+        System.out.println("1  .| Derajat Celcius    -> Fahrenheit  |");
+        System.out.println("2  .| Derajat Fahrenheit -> Celcius     |");
+        System.out.println("3  .| Derajat Reamur     -> Fahrenheit  |");
+        System.out.println("4  .| Derajat Fahrenheit -> Reamur      |");
+        System.out.println("5  .| Derajat Reamur     -> Celcius     |");
+        System.out.println("6  .| Derajat Celcius    -> Reamur      |");
+        System.out.println("7  .| Derajat Kelvin     -> Celcius     |");
+        System.out.println("8  .| Derajat Celcius    -> Kelvin      |");
+        System.out.println("9  .| Derajat Kelvin     -> Fahrenheit  |");
+        System.out.println("10 .| Derajat Fahrenheit -> Kelvin      |");
+        System.out.println("11 .| Derajat Kelvin     -> Reamur      |");
+        System.out.println("12 .| Derajat Reamur     -> Kelvin      |");
+        System.out.println("========================================");
+    }
+
+    public static void main(String[] args) {
+        int pil;
+        float c, r, f, k;
+        char j = 'Y';
+        Scanner input = new Scanner(System.in);
+        welcome();
+        tabel();
+
+        do {
+            System.out.println("Masukkan Pilihan Anda Sesuai Dengan Yang di tabel :");
+            pil = input.nextInt();
+
+            switch (pil) {
+                case 1:
+                    System.out.println("-------- 1.) Anda memilih Celcius -> Fahrenheit --------");
+                    System.out.println("Masukkan suhu celcius yang diketahui : ");
+                    c = input.nextInt();
+                    f = (9 / 5 * c) + 32;
+                    System.out.println("Rumusnya yaitu : 9/5 * °C + (32) = 9/5 * " + c + " +(32) =  " + f);
+                    System.out.println("Hasilnya adalah : " + f + "derajat Fahrenheit");
+                    break;
+
+                case 2:
+                    System.out.println("--------2.) Anda memilih Fahrenheit  -> Celcius --------");
+                    System.out.println("Masukkan suhu fahrenheit yang diketahui : ");
+                    f = input.nextInt();
+                    c = 5 / 9 * (f - (32));
+                    System.out.println("Rumusnya yaitu : 5/9 * °F - (32) = 5/9 *" + c + " - (32) = " + c);
+                    System.out.println("Hasilnya adalah : " + c + "derajat Celcius");
+                    break;
+
+                case 3:
+                    System.out.println("--------3.) Anda memilih Reamur -> Fahrenheit  --------");
+                    System.out.println("Masukkan suhu reamur yang diketahui : ");
+                    r = input.nextInt();
+                    f = (9 / 4 * r) + (32);
+                    System.out.println("Rumusnya yaitu : 9/4 * °R + (32) = 9/4 * " + f + " + (32) = " + r);
+                    System.out.println("Hasilnya adalah : " + f + "derajat Fahrenheit");
+                    break;
+
+                case 4:
+                    System.out.println("--------4.) Anda memilih Fahrenheit -> Reamur --------");
+                    System.out.println("Masukkan suhu fahrenheit yang diketahui : ");
+                    f = input.nextInt();
+                    r = 4 / 9 * (f - 32);
+                    System.out.println("Rumusnya yaitu : (4/9) * (°R -32) = (4/9) * (" + f + " - 32) = " + f);
+                    System.out.println("Hasilnya adalah : " + r + "derajat Reamur");
+                    break;
+
+                case 5:
+                    System.out.println("-------- 5 .) Anda memilih Reamur -> Celcius --------");
+                    System.out.println("Masukkan suhu reamur yang diketahui : ");
+                    r = input.nextInt();
+                    c = 5 / 4 * r;
+                    System.out.println("Rumusnya yaitu : 5/4 * °R = 5/4 * " + r + " = " + c);
+                    System.out.println("Hasilnya adalah : " + c + "derajat Celcius");
+                    break;
+
+                case 6:
+                    System.out.println("--------6 .) Anda memilih Celcius -> Reamur--------");
+                    System.out.println("Masukkan suhu celcius yang diketahui :  ");
+                    c = input.nextInt();
+                    r = 4 / 5 * c;
+                    System.out.println("Rumusnya yaitu : 4/5 * °C = 4/5 * " + c + " = " + r);
+                    System.out.println("Hasilnya adalah : " + r + "derajat Reamur");
+                    break;
+
+                case 7:
+                    System.out.println("--------7 .) Anda memilih Kelvin -> Celcius--------");
+                    System.out.println("Masukkan suhu kelvin yang diketahui :  ");
+                    k = input.nextInt();
+                    c = 273 - k;
+                    System.out.println("Rumusnya yaitu : 273 -  °K = 273 -" + k + " = " + c);
+                    System.out.println("Hasilnya adalah : " + c + "derajat Celcius");
+                    break;
+
+                case 8:
+                    System.out.println("--------8 .) Anda memilih Celcius -> Kelvin--------");
+                    System.out.println("Masukkan suhu celcius yang diketahui :  ");
+                    c = input.nextInt();
+                    k = 273 + c;
+                    System.out.println("Rumusnya yaitu : 273 +  °K = 273 +" + c + " = " + k);
+                    System.out.println("Hasilnya adalah : " + c + "derajat Celcius");
+                    break;
+
+                case 9:
+                    System.out.println("-------- 9 .) Anda memilih Kelvin -> Fahrenheit--------");
+                    System.out.println("Masukkan suhu kelvin yang diketahui :  ");
+                    k = input.nextInt();
+                    f = 9 / 5 * (k - 273) + 32;
+                    System.out.println("Rumusnya yaitu : 273 +  °K = 273 +" + f + " = " + k);
+                    System.out.println("Hasilnya adalah : " + f + "derajat Celcius");
+                    break;
+
+                case 10:
+                    System.out.println("-------- 10 .) Anda memilih Fahrenheit -> Kelvin--------");
+                    System.out.println("Masukkan suhu fahrenheit yang diketahui :  ");
+                    f = input.nextInt();
+                    k = 5 / 9 * (f - 32) + 273;
+                    System.out.println("Rumusnya yaitu : 5/9 * (°F - 32) + 273 = 5/9 * (" + f + "- 32 + 273 = " + k);
+                    System.out.println("Hasilnya adalah : " + k + "derajat Kelvin");
+                    break;
+
+                case 11:
+                    System.out.println("--------11 .) Anda memilih Kelvin -> Reamur--------");
+                    System.out.println("Masukkan suhu kelvin yang diketahui :  ");
+                    k = input.nextInt();
+                    r = 4 / 5 * (k - 273);
+                    System.out.println("Rumusnya yaitu : (4/5 * °K) - 273 = (4/5 * " + k + ") - 273 = " + r);
+                    System.out.println("Hasilnya adalah : " + r + "derajat Reamur");
+                    break;
+
+                case 12:
+                    System.out.println("--------12 .) Anda memilih Reamur -> Kelvin--------");
+                    System.out.println("Masukkan suhu kelvin yang diketahui :  ");
+                    r = input.nextInt();
+                    k = (5 / 4 * r) + 273;
+                    System.out.println("Rumusnya yaitu : (5/4 * °R) + 273 = (5/4 * " + r + ") + 273 = " + k);
+                    System.out.println("Hasilnya adalah : " + k + "derajat Kelvin");
+                    break;
+
+                    default:
+                    System.out.println("Pilihan tidak sesuai pada tabel ");
+                     System.out.println("silahkan pilih sesuai pada tabel ");
+
+            }
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println("mau coba program lagi ?  [Y/N] : ");
+            j = input.next().charAt(0);
+            input.nextLine();
+
+        } while (j == 'Y' || j == 'y');
+        System.out.println("Terima kasih telah menggunakan program ini ");
+        System.out.println("made by ikkoc_awinata");
+
+    }
+}
