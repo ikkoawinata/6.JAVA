@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class pembagian {
+    public static void welcome(){
+        System.out.println("=======================================================");
+             System.out.println("            P    R    O    G    R    A    M ");
+                 System.out.println("              PEMBAGIAN + NOTE");
+                         System.out.println("=======================================================");
+    }
+    
+
+    public static void main(String[] args){
+        float a, b, hasil;
+        char j;
+        Scanner input = new Scanner (System.in);
+        welcome();
+        
+
+        do{
+        System.out.println("masukkan bilangan yang akan dibagi : ");
+        a = input.nextInt();
+         System.out.println("masukkan bilangan pembagi : ");
+        b = input.nextInt();
+
+        if ( b == 0){
+            System.out.println("Tidak dapat diibagi dengan angka nol, maka hasilnya akan tetap");
+        }else{
+            hasil = a / b;
+            System.out.println("hasil dari pembagian " + a + " / " + b + " = " + hasil);
+        }
+          System.out.println("=======================================================");
+        System.out.println("mau coba program lagi ? [Y/N] : ");
+        j = input.next().charAt(0);
+        input.nextLine();
+    }
+    while (j == 'Y' || j == 'y');
+    System.out.println("terima kasih telah menggunakan program ini");
+    System.out.println("Made by ikkoc_awinata");
+}
+}
+
