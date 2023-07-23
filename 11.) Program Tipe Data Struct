@@ -1,0 +1,44 @@
+public class DataPribadi {
+    //ini adalah tipe data struct pada bahasa java 
+    private String nama;
+    private long NIM;
+    private String jenisKelamin;
+    private String alamat;
+
+    public DataPribadi(String nama, long NIM, String jenisKelamin, String alamat) {
+        this.nama = nama;
+        this.NIM = NIM;
+        this.jenisKelamin = jenisKelamin;
+        this.alamat = alamat;
+    }
+
+    public static void main(String[] args) {
+        DataPribadi mahasiswa1 = new DataPribadi("Ikko Cahya Awinata", 22051204038L, "Perempuan", "Jl. Sampoerna no 12");
+
+        System.out.println("========================================");
+        System.out.println("Nama          = " + mahasiswa1.getNama());
+        System.out.println("NIM           = " + mahasiswa1.getNIM());
+        System.out.println("Jenis Kelamin = " + mahasiswa1.getJenisKelamin());
+        System.out.println("Alamat        = " + mahasiswa1.getAlamat());
+        System.out.println("========================================");
+        System.out.println();
+        System.out.println("Itulah contoh program dengan tipe data class pada Java");
+    }
+    //MENGGUNAKAN KATA "GET"
+
+    public String getNama() {
+        return nama;
+    }
+
+    public long getNIM() {
+        return NIM;
+    }
+
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+}
