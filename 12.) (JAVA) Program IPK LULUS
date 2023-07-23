@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class nilaiipk {
+    public static void welcome(){
+        System.out.println("===============================================================");
+         System.out.println("                 P    R    O    G    R    A    M              ");
+          System.out.println("              LULUS IPK (PERCABANGAN IF ELSE)                ");
+           System.out.println("                   B A H A S A   J A V A                    ");
+            System.out.println("===============================================================");
+    }
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        welcome();
+        String mhs,nim,fak,jur,prodi;
+        float ipk;
+        char j = 'Y';
+
+
+        do{
+
+        System.out.println("Masukkan nama mashsiswa : [ex:Nama_nama]");
+        mhs = input.nextLine();
+         System.out.println("Angkatan  : ");
+        nim = input.nextLine();
+         System.out.println("Fakultas : [ex:Nama_nama]");
+        fak = input.nextLine();
+         System.out.println("Jurusan : [ex:Nama_nama]");
+        jur = input.nextLine();
+         System.out.println("Program Studi  : [ex:Nama_nama]");
+        prodi = input.nextLine();
+         System.out.println("Masukkan IPK mashsiswa : ");
+        ipk = input.nextInt();
+
+
+
+
+
+        if (ipk == 4.00){
+            System.out.println("Saudara" + mhs + " angkatan " + nim + " dari " + fak + " dengan " + jur + " Program studi " + prodi + " lulus dengan IPK sempurna " + ipk);
+        }else if (ipk >= 3.49){
+             System.out.println("Saudara" + mhs + " angkatan " + nim + " dari " + fak + " dengan " + jur + " Program studi " + prodi + " lulus dengan IPK sangat baik  " + ipk);
+        }else if (ipk >= 3.49){
+            System.out.println("Saudara" + mhs + " angkatan " + nim + " dari " + fak + " dengan " + jur + " Program studi " + prodi + " lulus dengan IPK baik  " + ipk);
+        }else if (ipk >= 2.49){
+            System.out.println("Saudara" + mhs + " angkatan " + nim + " dari " + fak + " dengan " + jur + " Program studi " + prodi + " dinyatakan mengulang dengan IPK  " + ipk);
+        }else if (ipk >= 1.49){
+            System.out.println("Saudara" + mhs + " angkatan " + nim + " dari " + fak + " dengan " + jur + " Program studi " + prodi + " dinyatakan tidak lulus  " + ipk);
+        }
+        System.out.println("mau coba program lagi ? [Y/N] : ");
+        j = input.next().charAt(0);
+        input.nextLine();
+        }while ( j =='Y' || j == 'y');
+          System.out.println("===============================================================");
+        System.out.println("terima kasih telah menggunakan program ini");
+        System.out.println("made by ikkoc_awinata");
+    }
+}
+
+        
