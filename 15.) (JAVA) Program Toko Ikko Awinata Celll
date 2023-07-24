@@ -1,0 +1,147 @@
+import java.util.Scanner;
+
+public class tokoikkocell {
+    public static void welcome() {
+        System.out.println(
+                "==================================================================================================");
+        System.out.println("                     P    R    O    G    R    A    M               ");
+        System.out.println("       T  O  K  O     I  K  K  O     A  W  I  N  A  T  A    C  E  L  L");
+        System.out.println("                    B  A  H  A  S  A    J  A  V  A  ");
+        System.out.println(
+                "==================================================================================================");
+
+    }
+
+    public static void tabel() {
+        System.out.println(
+                "==================================================================================================");
+        System.out.println("No.||\t\t Nama Jasa\t\t\t ||\t\t  Harga Satuan\t\t\t|| ");
+        System.out.println(
+                "==================================================================================================");
+        System.out.println("1. ||\t Edit Background Foto\t\t\t || Rp.\t\t\t\t\t  10.000||");
+        System.out.println("2. ||\t System.out.println hitam putih\t\t || Rp.\t\t\t\t\t   1.000||");
+        System.out.println("3. ||\t System.out.println Warna fulll\t\t || Rp. \t\t\t\t   2.500||");
+        System.out.println("4. ||\t cetak foto 4x6 (1 foto get 5 pcs)\t || Rp.\t\t\t\t\t   7.000||");
+        System.out.println("5. ||\t cetak foto 3x4 (1 foto get 6 pcs)\t || Rp.\t\t\t\t\t   7.000||");
+        System.out.println("6. ||\t cetak foto 2x3 (1 foto get 6 pcs)\t || Rp.\t\t\t\t\t   7.000||");
+        System.out.println("7. ||\t Pengetikan / lembar           \t\t || Rp.\t\t\t\t\t   5.000||");
+        System.out.println("8. ||\t Laminating / lembar            \t || Rp.\t\t\t\t\t   5.000||");
+        System.out.println("9. ||\t Pulsa hp     \t\t\t\t || Rp.\t\t\t\t          +3.000||");
+        System.out.println("10.||\t token listrik  \t\t\t || Rp.\t\t\t\t          +3.000||");
+        System.out.println(
+                "==================================================================================================");
+        System.out.println("\t\t\t\t\t Made by Ikko Awinata \t\t\t\t\t ");
+        System.out.println(
+                "==================================================================================================");
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        welcome();
+        float total, fotobg, print, cetakfoto, pengetikan, laminating, hasil, pulsa, token, hasil1 = 0,
+                hasil2 = 0, hasil3 = 0, hasil4 = 0, hasil5 = 0, hasil6 = 0, hasil7 = 0, hasil8 = 0, hasil9 = 0,
+                hasil10 = 0;
+        int pilihan;
+        char j = 'Y';
+        do {
+            tabel();
+
+            System.out.println("Silahkan anda mau apa ? [1/2/3/4/5/6/7/8/9/10] :");
+            pilihan = input.nextInt();
+
+            switch (pilihan) {
+                case 1:
+                    System.out.println("----- 1.) ANDA MEMILIH EDIT BACKGROUND FOTO -----");
+                    System.out.println("Anda mau edit berapa foto ? [*masukkan angka]");
+                    fotobg = input.nextFloat();
+                    hasil1 = fotobg * 10000;
+                    System.out.println("Total harganya adalah : " + hasil1);
+                    break;
+
+                case 2:
+                    System.out.println("----- 2.) ANDA MEMILIH PRINT HITAM PUTIH  -----");
+                    System.out.println("Anda mau print berapa lembar ? [*masukkan angka]");
+                    print = input.nextFloat();
+                    hasil2 = print * 1000;
+                    System.out.println("Total harganya adalah : " + hasil2);
+                    break;
+
+                case 3:
+                    System.out.println("----- 3.) ANDA MEMILIH PRINT FULL COLOR -----");
+                    System.out.println("Anda mau print berapa lembar ? [*masukkan angka]");
+                    print = input.nextFloat();
+                    hasil3 = print * 2500;
+                    System.out.println("Total harganya adalah : " + hasil3);
+                    break;
+
+                case 4:
+                    System.out.println("----- 4.) ANDA MEMILIH CETAK FOTO 4X6 (1 foto get 5 pcs) -----");
+                    System.out.println("Silahkan kirim fotonya ? [*masukkan angka]");
+                    cetakfoto = input.nextFloat();
+                    hasil4 = cetakfoto * 7000;
+                    System.out.println("Total harganya adalah : " + hasil4);
+                    break;
+
+                case 5:
+                    System.out.println("----- 5.) ANDA MEMILIH CETAK FOTO 3X4 (1 foto get 6 pcs) -----");
+                    System.out.println("Silahkan kirim fotonya ? [*masukkan angka]");
+                    cetakfoto = input.nextFloat();
+                    hasil5 = cetakfoto * 7000;
+                    System.out.println("Total harganya adalah : " + hasil5);
+                    break;
+
+                case 6:
+                    System.out.println("----- 6.) ANDA MEMILIH CEATK FOTO 2X3 (1 foto get 6 pcs)-----");
+                    System.out.println("Silahkan kirim fotonya ? [*masukkan angka]");
+                    cetakfoto = input.nextFloat();
+                    hasil6 = cetakfoto * 7000;
+                    System.out.println("Total harganya adalah : " + hasil6);
+                    break;
+
+                case 7:
+                    System.out.println("----- 7.) ANDA MEMILIH PENGETIKAN -----");
+                    System.out.println("berapa halaman yang mau diketik ? [*masukkan angka]");
+                    pengetikan = input.nextFloat();
+                    hasil7 = pengetikan * 5000;
+                    System.out.println("Total harganya adalah : " + hasil7);
+                    break;
+
+                case 8:
+                    System.out.println("-----  8.) ANDA MEMILIH LAMINATING  -----");
+                    System.out.println("Berapa lembar yang mau dilaminating ? [*masukkan angka]");
+                    laminating = input.nextFloat();
+                    hasil8 = laminating * 5000;
+                    System.out.println("Total harganya adalah : " + hasil8);
+                    break;
+
+                case 9:
+                    System.out.println("----- 9.) ANDA MEMILIH BELI PULSA -----");
+                    System.out.println("Mau beli pulsa berapa ? [ex = 5000]");
+                    pulsa = input.nextFloat();
+                    hasil9 = (pulsa * 1) + 3000;
+                    System.out.println("Total harganya adalah : " + hasil9);
+                    break;
+
+                case 10:
+                    System.out.println("----- 10.) ANDA MEMILIH TOKEN LISTRIK-----");
+                    System.out.println("Mau beli pulsa berapa ? [ex = 5000]");
+                    pulsa = input.nextFloat();
+                    hasil10 = (pulsa * 1) + 3000;
+                    System.out.println("Total harganya adalah : " + hasil10);
+                    break;
+
+                default:
+                    System.out.println("Pilihan tidak sesuai");
+                    System.out.println("Silahkan pilih sesuai pada tabel");
+                    break;
+            }
+            System.out.println("==================================================================================================");
+            System.out.println(" Mau coba program lagi ? [Y/N] :");
+            j = input.next().charAt(0);
+        } while (j == 'Y' || j == 'y');
+        total = hasil1 + hasil2 + hasil3 + hasil4 + hasil5 + hasil6 + hasil7 + hasil8 + hasil9 + hasil10;
+        System.out.println("Jadi total keseluruhan anda adalah = " + total);
+        System.out.println("Terima kasih telah menggunakan program ini");
+        System.out.println("Made by ikkoc_awinata");
+        }
+    }
