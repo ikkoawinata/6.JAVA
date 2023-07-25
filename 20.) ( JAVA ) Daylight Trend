@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class daylighttrend {
+    public static void welcome() {
+        System.out.println("========================================================================");
+        System.out.println("                         P   R   O   G   R   A   M                      ");
+        System.out.println("                       D A Y L I G H T  T R E N D                       ");
+        System.out.println("                         B A H A S A   J A V A");
+        System.out.println("========================================================================");
+
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x = 20;
+        welcome();
+        input.nextLine();
+        System.out.println("and i can still see it all");
+        input.nextLine();
+        for (; x > 0; x--) {
+            System.out.println("A A A A A A A A A A A A A A A A A A A A A A A A");
+        }
+
+
+
+        System.out.println("=================================================================");
+        System.out.println();
+
+
+
+        input.nextLine();
+        System.out.println("all of you, all of me");
+        input.nextLine();
+        x = 20;
+        for (; x > 0; x--) {
+            System.out.println("A A A A A A A A A A A A A A A A A A A A A A A A");
+        }
+        System.out.println("=================================================================");
+        System.out.println();
+
+
+        input.nextLine();
+        System.out.println("i once believed love would be");
+        input.nextLine();
+        x = 20;
+        for (; x > 0; x--) {
+            System.out.println("A A A A A A A A A A A A A A A A A A A A A A A A");
+        }
+
+    }
+}
