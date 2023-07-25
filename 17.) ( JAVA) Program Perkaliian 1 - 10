@@ -1,0 +1,24 @@
+public class multi110 {
+    public static void welcome() {
+        System.out.println("=======================================================");
+        System.out.println("            P    R    O    G    R    A    M ");
+        System.out.println("                    PERKALIAN 1- 10");
+        System.out.println( "              B A H A S A   J A V A");
+        System.out.println("=======================================================");
+    }
+
+
+    public static void main(String[] args){
+        int i, j;
+        String row = " " ;
+        welcome();
+        for(i = 1; i <= 10; i++){
+            row = "";
+            for ( j = 1; j<= 10; j++){
+                row +=  i * j + " | " ;
+            }
+            System.out.println(row);
+        }
+    }
+}
+
