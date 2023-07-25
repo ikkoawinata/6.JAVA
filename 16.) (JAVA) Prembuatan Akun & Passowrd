@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class buatkaun {
+
+    public static void welcome() {
+        System.out.println("===========================================================");
+        System.out.println("S E L A M A T  D A T A N G  D I  P R O G R A M ");
+        System.out.println("             MEMBUAT AKUN DAN PASSWORD  ");
+        System.out.println("===========================================================");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        welcome();
+
+        int i = 0;
+        String user = "";
+        String passw = "";
+        String login = "";
+        String x = "";
+        String y = "";
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Silahkan Buat Akun Dulu yah");
+        System.out.print("Username : ");
+        user = input.nextLine();
+        System.out.print("Password : ");
+        passw = input.nextLine();
+        System.out.println("Akun Sudah Dibuat, Silakan Login Untuk Masuk");
+
+        while (i <= 2) {
+            System.out.print("Username : ");
+            x = input.nextLine();
+            System.out.print("Password : ");
+            y = input.nextLine();
+
+            if (x.equals(user) && y.equals(passw)) {
+                login = "Berhasil";
+                System.out.println("YEYY ANDA BERHASIL LOGIN");
+                System.out.println("========================================================");
+                System.out.println("Sekarang Coba Anda Masukkan Username & Password yang tidak sesuai sebanyak 3 kali");
+            } else {
+                System.out.println("Username atau Password Anda Salah");
+                i++;
+            }
+        }
+
+        if (login.equals("Berhasil")) {
+            System.out.println("YEEYY ANDA TELAH BERHASIL LOGIN");
+        } else {
+            System.out.println();
+            System.out.println("Anda Telah 3x Salah Username & Password");
+            System.out.println("Maaf Akun Anda Kami Blokir Sementara");
+            System.out.println("Untuk Lebih lanjut, Hubungi Nomor Dia. Jika Tidak Ada Respon Lebih Baik Mundur Saja.");
+        }
+
+        System.out.println("Sekian Dan Terima Kasih");
+    }
+}
+
