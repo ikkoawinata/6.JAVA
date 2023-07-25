@@ -1,0 +1,425 @@
+import java.util.Scanner;
+
+public class satuanpanjang {
+    public static void welcome() {
+        System.out.println("================================================================================");
+        System.out.println("       S E L A M A T   D A T A N G   D I   P R O G R A M ");
+        System.out.println("                  CONVERT SATUAN PANuserANG ");
+        System.out.println("================================================================================");
+    }
+
+    public static void tabel() {
+        System.out.println("================================================================================");
+        System.out.println("NO |                 SATUAN PANuserANG               ");
+        System.out.println("================================================================================");
+        System.out.println("1.  | KM (Kilometer);       ->   HM (Hektometer);                                 |");
+        System.out.println("2.  | KM (Kilometer);       ->   DAM (Dekameter);                                 |");
+        System.out.println("3.  | KM (Kilometer);       ->   M (Meter);                                       |");
+        System.out.println("4.  | KM (Kilometer);       ->   DM (Desimeter);                                  |");
+        System.out.println("5.  | KM (Kilometer);       ->   CM (Centimeter);                                 |");
+        System.out.println("6.  | KM (Kilometer);       ->   MM (Milimeter);                                  |");
+        System.out.println("7.  | HM (Hektometer);      ->   KM (Kilometer);                                  |");
+        System.out.println("8.  | HM (Hektometer);      ->   DAM (Dekameter);                                 |");
+        System.out.println("9.  | HM (Hektometer);      ->   M (Meter);                                       |");
+        System.out.println("10. | HM (Hektometer);      ->   DM (Desimeter);                                  |");
+        System.out.println("11. | HM (Hektometer);      ->   CM (Centimeter);                                 |");
+        System.out.println("12. | HM (Hektometer);      ->   MM (Milimeter);                                  |");
+        System.out.println("13. | DAM (Dekameter);      ->   KM (Kilometer);                                  |");
+        System.out.println("14. | DAM (Dekameter);      ->   HM (Hektometer);                                 |");
+        System.out.println("15. | DAM (Dekameter);      ->   M (Meter);                                       |");
+        System.out.println("16. | DAM (Dekameter);      ->   DM (Desimeter);                                  |");
+        System.out.println("17. | DAM (Dekameter);      ->   CM (Centimeter);                                 |");
+        System.out.println("18. | DAM (Dekameter);      ->   MM (Milimeter);                                  |");
+        System.out.println("19. | M (Meter);            ->   KM (Kilometer);                                  |");
+        System.out.println("20. | M (Meter);            ->   HM (Hektometer);                                 |");
+        System.out.println("21. | M (Meter);            ->   DAM (Dekameter);                                 |");
+        System.out.println("22. | M (Meter);            ->   DM (Desimeter);                                  |");
+        System.out.println("23. | M (Meter);            ->   CM (Centimeter);                                 |");
+        System.out.println("24. | M (Meter);            ->   MM (Milieter);                                   |");
+        System.out.println("25. | DM (Desimeter);       ->   KM (Kilometer);                                  |");
+        System.out.println("26. | DM (Desimeter);       ->   HM (Hektometer);                                 |");
+        System.out.println("27. | DM (Desimeter);       ->   DAM (Dekameter);                                 |");
+        System.out.println("28. | DM (Desimeter);       ->   M (Meter);                                       |");
+        System.out.println("29. | DM (Desimeter);       ->   CM (Centimeter);                                 |");
+        System.out.println("30. | DM (Desimeter);       ->   MM (Milimeter);                                  |");
+        System.out.println("31. | CM (Centimeter);      ->   KM (Kilometer);                                  |");
+        System.out.println("32. | CM (Centimeter);      ->   HM (Hektometer);                                 |");
+        System.out.println("33. | CM (Centimeter);      ->   DAM (Dekameter);                                 |");
+        System.out.println("34. | CM (Centimeter);      ->   M (Meter);                                       |");
+        System.out.println("35. | CM (Centimeter);      ->   DM (Desimeter);                                  |");
+        System.out.println("36. | CM (Centimeter);      ->   MM (Milimeter);                                  |");
+        System.out.println("37. | MM (Milimeter);       ->   KM (Kilometer);                                  |");
+        System.out.println("38. | MM (Milimeter);       ->   HM (Hektometer);                                 |");
+        System.out.println("39. | MM (Milimeter);       ->   DAM (Dekameter);                                 |");
+        System.out.println("40. | MM (Milimeter);       ->   M (Meter);                                       |");
+        System.out.println("41. | MM (Milimeter);       ->   DM (Desimeter);                                  |");
+        System.out.println("42. | MM (Milimeter);       ->   CM (Centimeter);                                 |");
+        System.out.println("================================================================================");
+
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        welcome();
+        int pil;
+        float user, rumus;
+        char j = 'Y';
+
+        do{
+        tabel();
+        System.out.println("Silahkan pilih sesuai tabel : ");
+        pil = input.nextInt();
+
+        switch (pil) {
+            case 1:
+                System.out.println("------ 1.) KM-> HM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " * 10 =  " + rumus + " HM ");
+                break;
+
+            case 2:
+                System.out.println("------ 2.) KM -> DAM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " DAM ");
+                break;
+
+            case 3:
+                System.out.println("------ 3.) KM -> M --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 1000;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " M ");
+                break;
+
+            case 4:
+                System.out.println(" ------ 4.) KM -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10000;
+                System.out.println("hasilnya adalah : " + user + " * 10000 =  " + rumus + " DM ");
+                break;
+
+            case 5:
+                System.out.println("------ 5.) KM -> CM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100000;
+                System.out.println("hasilnya adalah : " + user + " * 100000 =  " + rumus + " CM ");
+                break;
+
+            case 6:
+                System.out.println("------ 6.) KM -> MM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 1000000;
+                System.out.println("hasilnya adalah : " + user + " * 1000000 =  " + rumus + " MM ");
+                break;
+
+            case 7:
+                System.out.println("------ 7.) HM -> KM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " KM ");
+                break;
+
+            case 8:
+                System.out.println("------ 8.) HM -> DAM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " * 10 =  " + rumus + " DAM ");
+                break;
+
+            case 9:
+                System.out.println("------ 9.) HM -> M -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " M ");
+                break;
+
+            case 10:
+                System.out.println("------ 10.) HM -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 1000;
+                System.out.println("hasilnya adalah : " + user + " * 1000 =  " + rumus + " DM ");
+                break;
+
+            case 11:
+                System.out.println("------ 11.) HM -> CM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10000;
+                System.out.println("hasilnya adalah : " + user + " * 10000 =  " + rumus + " CM ");
+                break;
+
+            case 12:
+                System.out.println("------ 12.) HM -> MM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100000;
+                System.out.println("hasilnya adalah : " + user + " * 100000 =  " + rumus + " MM ");
+                break;
+
+            case 13:
+                System.out.println("------ 13.) DAM -> KM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100;
+                System.out.println("hasilnya adalah : " + user + " / 100 =  " + rumus + " KM ");
+                break;
+
+            case 14:
+                System.out.println("------ 14.)DAM -> HM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " HM ");
+                break;
+
+            case 15:
+                System.out.println("------ 15.)DAM -> M --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " * 10 =  " + rumus + " M ");
+                break;
+
+            case 16:
+                System.out.println("------ 16.) DAM -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " DM");
+                break;
+
+            case 17:
+                System.out.println(" ------ 17.) DAM -> CM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 1000;
+                System.out.println("hasilnya adalah : " + user + " * 1000 =  " + rumus + " CM");
+                break;
+
+            case 18:
+                System.out.println("------ 18.) DAM -> MM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10000;
+                System.out.println("hasilnya adalah : " + user + " * 10000 =  " + rumus + " MM");
+                break;
+
+            case 19:
+                System.out.println("------ 19.)M -> KM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 1000;
+                System.out.println("hasilnya adalah : " + user + " / 1000 =  " + rumus + " KM");
+                break;
+
+            case 20:
+                System.out.println(" ------ 20.)M -> HM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100;
+                System.out.println("hasilnya adalah : " + user + " / 100 =  " + rumus + " HM");
+                break;
+
+            case 21:
+                System.out.println("  ------ 21.)M -> DAM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " DAM");
+                break;
+
+            case 22:
+                System.out.println(" ------ 22.)M -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " * 10 =  " + rumus + " DM");
+                break;
+
+            case 23:
+                System.out.println(" ------ 23.) M -> CM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " CM");
+                break;
+
+            case 24:
+                System.out.println("  ------ 24.) M -> MM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 1000;
+                System.out.println("hasilnya adalah : " + user + " * 1000 =  " + rumus + " MM");
+                break;
+
+            case 25:
+                System.out.println(" ------ 25.) DM -> KM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10000;
+                System.out.println("hasilnya adalah : " + user + " * 10000 =  " + rumus + " KM");
+                break;
+
+            case 26:
+                System.out.println(" ------ 26.) DM -> HM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 1000;
+                System.out.println("hasilnya adalah : " + user + " / 1000 =  " + rumus + " MM");
+                break;
+
+            case 27:
+                System.out.println(" ------ 27.) DM -> DAM ---------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100;
+                System.out.println("hasilnya adalah : " + user + " / 100 =  " + rumus + " DAM");
+                break;
+
+            case 28:
+                System.out.println(" ------ 28.) DM -> M -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " M");
+                break;
+
+            case 29:
+                System.out.println(" ------ 29.) DM -> CM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " * 10 =  " + rumus + " CM");
+                break;
+
+            case 30:
+                System.out.println(" ------ 30.) DM -> MM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 100;
+                System.out.println("hasilnya adalah : " + user + " * 100 =  " + rumus + " MM");
+                break;
+
+            case 31:
+                System.out.println(" ------ 31.) CM -> KM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100000;
+                System.out.println("hasilnya adalah : " + user + " / 100000 =  " + rumus + " KM");
+                break;
+
+            case 32:
+                System.out.println(" ------ 32.) CM -> HM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10000;
+                System.out.println("hasilnya adalah : " + user + " / 10000 =  " + rumus + " HM");
+                break;
+
+            case 33:
+                System.out.println("  ------ 33.) CM -> DAM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 1000;
+                System.out.println("hasilnya adalah : " + user + " / 1000 =  " + rumus + " DAM");
+                break;
+
+            case 34:
+                System.out.println(" ------ 34.) CM -> M --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100;
+                System.out.println("hasilnya adalah : " + user + " / 100 =  " + rumus + " M");
+                break;
+
+            case 35:
+                System.out.println("------ 35.) CM -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " DM");
+                break;
+
+            case 36:
+                System.out.println("------ 36.) CM -> MM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user * 10;
+                System.out.println("hasilnya adalah : " + user + " / 10 =  " + rumus + " MM");
+                break;
+
+            case 37:
+                System.out.println(" ----- 37.) MM -> KM -------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 1000000;
+                System.out.println("hasilnya adalah : " + user + " / 1000000 =  " + rumus + " KM");
+                break;
+
+            case 38:
+                System.out.println("------ 38.) MM -> HM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100000;
+                System.out.println("hasilnya adalah : " + user + " / 100000  =  " + rumus + " HM");
+                break;
+
+            case 39:
+                System.out.println("------- 39.) MM -> DAM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10000;
+                System.out.println("hasilnya adalah : " + user + " / 10000   =  " + rumus + " DAM");
+                break;
+
+            case 40:
+                System.out.println("------ 40.) MM  -> M --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 1000;
+                System.out.println("hasilnya adalah : " + user + " / 1000   =  " + rumus + " M");
+                break;
+
+            case 41:
+                System.out.println("------ 41.) MM -> DM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 100;
+                System.out.println("hasilnya adalah : " + user + " / 100   =  " + rumus + " DM");
+                break;
+
+            case 42:
+                System.out.println("------ 42.) MM -> CM --------");
+                System.out.println("Masukkan angka : ");
+                user = input.nextInt();
+                rumus = user / 10;
+                System.out.println("hasilnya adalah : " + user + " / 10   =  " + rumus + " CM");
+                break;
+
+            default:
+                System.out.println("Pilihan tidak sesuai dengan tabel ");
+                System.out.println("Silahkan pilih sesuai pada tabel");
+                System.out.println(" ");
+
+        }
+        System.out.println("Mau coba program ini lagi ? [Y/N] : ");
+        j = input.next().charAt(0);
+        input.nextLine();
+        System.out.println(" ");
+    }
+    while ( j == 'Y' || j == 'y');
+    System.out.println("Terima kasih telah menggunakan program ini ");
+    System.out.println("Made by ikkoc_awinata");
+}
+}
