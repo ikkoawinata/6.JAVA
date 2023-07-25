@@ -4,13 +4,14 @@ public class satuanpanjang {
     public static void welcome() {
         System.out.println("================================================================================");
         System.out.println("       S E L A M A T   D A T A N G   D I   P R O G R A M ");
-        System.out.println("                  CONVERT SATUAN PANuserANG ");
+        System.out.println("                  CONVERT SATUAN PANJANG ");
+        System.out.println("                   B A H A S A   J A V A");
         System.out.println("================================================================================");
     }
 
     public static void tabel() {
         System.out.println("================================================================================");
-        System.out.println("NO |                 SATUAN PANuserANG               ");
+        System.out.println("NO |                 SATUAN PANJANG               ");
         System.out.println("================================================================================");
         System.out.println("1.  | KM (Kilometer);       ->   HM (Hektometer);                                 |");
         System.out.println("2.  | KM (Kilometer);       ->   DAM (Dekameter);                                 |");
