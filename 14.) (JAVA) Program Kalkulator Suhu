@@ -111,7 +111,7 @@ public class suhu {
                     c = input.nextInt();
                     k = 273 + c;
                     System.out.println("Rumusnya yaitu : 273 +  °K = 273 +" + c + " = " + k);
-                    System.out.println("Hasilnya adalah : " + c + "derajat Celcius");
+                    System.out.println("Hasilnya adalah : " + k + "derajat kelvin");
                     break;
 
                 case 9:
