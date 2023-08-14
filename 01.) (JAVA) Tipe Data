@@ -1,27 +1,49 @@
-public class main {
-  public static void main(String[] args) {
-    System.out.println("==================================================");
-     System.out.println("               MENGETAHUI TIPE DATA              ");
-      System.out.println("             B A H A S A   J A V A              ");
-      System.out.println("==================================================");
-      System.out.println();
-      int num = 5;
-      float floatnum = 5.99f;
-      char mtLetter = 'D';
-      boolean bool = true;
-      String myText = "Hello";
-      int[] array = {4,7,3,8,1};
+public class DataTypesProgram {
+    public static void judul() {
+        System.out.println("=====================================================");
+        System.out.println("              SELAMAT DATANG DI PROGRAM              ");
+        System.out.println("                MENGETAHUI TIPE DATA                 ");
+        System.out.println("=====================================================");
+    }
 
-// mencetak ke layar isi variabel
-       System.out.println("Tipe data integer  : " + num);
-          System.out.println("Tipe data float  : " + floatnum);
-             System.out.println("Tipe data char  : " + mtLetter);
-                System.out.println("Tipe data Boolean  : " + bool);
-                   System.out.println("Tipe data String  : " + myText);
-                      System.out.println("Tipe data integer array : " + array);
+    public static void main(String[] args) {
+        judul();
 
-                      for (int i : array) {
-                        System.out.print(i +" ");
-  }
-}
+        System.out.println("1.) TIPE DATA INTEGER");
+        int dataInteger = 0;
+        System.out.println("Data     : " + dataInteger);
+        System.out.println("Bertipe  : " + Integer.TYPE + "\n");
+
+        System.out.println("2.) TIPE DATA FLOAT");
+        double dataFloat = 6.08;
+        System.out.println("Data     : " + dataFloat);
+        System.out.println("Bertipe  : " + Double.TYPE + "\n");
+
+        System.out.println("3.) TIPE DATA STRING");
+        String dataString = "Ikko Cahya Awinata";
+        System.out.println("Data     : " + dataString);
+        System.out.println("Bertipe  : " + String.class + "\n");
+
+        System.out.println("4.) TIPE DATA BOOLEAN");
+        boolean dataBool = true;
+        System.out.println("Data     : " + dataBool);
+        System.out.println("Bertipe  : " + Boolean.TYPE + "\n");
+
+        System.out.println("5.) TIPE DATA CHAR");
+        char dataChar = 'F';
+        System.out.println("Data     : " + dataChar);
+        System.out.println("Bertipe  : " + Character.TYPE + "\n");
+
+        System.out.println("6.) TIPE DATA ARRAY");
+        int[] dataArray = { 1, 2, 3, 4, 5 };
+        System.out.print("Data     : [");
+        for (int i = 0; i < dataArray.length; i++) {
+            System.out.print(dataArray[i]);
+            if (i < dataArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+        System.out.println("Bertipe  : " + dataArray.getClass().getComponentType() + "[]\n");
+    }
 }
